@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="src/output.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body class="bg-green-300">
+
+    <div id="loading" class="fixed inset-0 bg-white bg-opacity-75 flex items-center justify-center z-50">
+        <img src="asset/Logo Protic.png" alt="Loading..." class="h-16 w-16 animate-bounce">
+    </div>
+    
+
+    <div class="flex flex-col items-center justify-center min-h-screen max-w-full" id="content">
+        <img src="asset/Logo Protic.png" class="m-5 overflow-auto size-40 animate-melayang">
+        <img src="asset/pamflet.png" class="mb-4 w-96 min-w-1 md:w-128 rounded text-white shadow-sm">
+
+        <h1 class="text-2xl font-bold mb-4 w-96 min-w-1 md:w-128 text-center bg-green-600 p-10 rounded text-white shadow-sm">Formulir Pendaftaran</h1>
+        <form name="submit-to-google-sheet" class=" w-96 min-w-1 md:w-128 p-6 rounded-lg bg-white border-white" id="form">
+          
+
+            
+            <div class="flex flex-col mb-4 min-w-1 bg-white p-2 rounded shadow-md border-2 border-gray-100">
+                <label class="text-gray-900 font-semibold">Nama</label>
+                <input name="nama" type="text" class="border border-gray-300 rounded p-2 mt-1 focus:outline-none focus:ring focus:ring-green-400" required>
+            </div>
+
+            <div class="flex flex-col mb-4 bg-white p-2 rounded shadow-md min-w-1 border-2 border-gray-100">
+                <label class="text-gray-900 font-semibold">Nama SMA/SMK</label>
+                <input name="nama SMA/SMK" type="text" class="border border-gray-300 rounded p-2 mt-1 focus:outline-none focus:ring focus:ring-green-400" required>
+            </div>
+
+            <div class="flex flex-col mb-4 bg-white p-2 rounded shadow-md min-w-1 border-2 border-gray-100">
+                <label class="text-gray-900 font-semibold">Jurusan SMA/SMK</label>
+                <input name="jurusan SMA/SMK" type="text" class="border border-gray-300 rounded p-2 mt-1 focus:outline-none focus:ring focus:ring-green-400" required>
+            </div>
+
+            <div class="flex flex-col mb-4 bg-white p-2 rounded shadow-md min-w-1 border-2 border-gray-100">
+                <label class="text-gray-900 font-semibold">Prodi</label>
+                <input name="prodi" type="text" class="border border-gray-300 rounded p-2 mt-1 focus:outline-none focus:ring focus:ring-green-400" required>
+            </div>
+
+            <div class="flex flex-col mb-4 bg-white p-2 rounded shadow-md min-w-1 border-2 border-gray-100">
+                <label class="text-gray-900 font-semibold">Divisi Pilihan 1</label>
+                <input name="divisi pilihan 1" type="text" class="border border-gray-300 rounded p-2 mt-1 focus:outline-none focus:ring focus:ring-green-400" required>
+            </div>
+
+            <div class="flex flex-col mb-4 bg-white p-2 rounded shadow-md min-w-1 border-2 border-gray-100">
+                <label class="text-gray-900 font-semibold">Divisi Pilihan 2</label>
+                <input name="divisi pilihan 2" type="text" class="border border-gray-300 rounded p-2 mt-1 focus:outline-none focus:ring focus:ring-green-400" required>
+            </div>
+
+            <div class="flex flex-col mb-4 bg-white p-2 rounded shadow-md min-w-1 border-2 border-gray-100">
+                <label class="text-gray-900 font-semibold">Divisi Pilihan 3</label>
+                <input name="divisi pilihan 3" type="text" class="border border-gray-300 rounded p-2 mt-1 focus:outline-none focus:ring focus:ring-green-400" required>
+            </div>
+
+            <div class="flex flex-col mb-4 bg-white p-2 rounded shadow-md min-w-1 border-2 border-gray-100">
+                <label class="text-gray-900 font-semibold">No WA</label>
+                <input name="no wa" type="text" class="border border-gray-300 rounded p-2 mt-1 focus:outline-none focus:ring focus:ring-green-400" required>
+            </div>
+
+            <div class="flex flex-col mb-4 bg-white p-2 rounded shadow-md min-w-1 border-2 border-gray-100">
+                <label class="text-gray-900 font-semibold">Email Aktif</label>
+                <input name="email aktif" type="text" class="border border-gray-300 rounded p-2 mt-1 focus:outline-none focus:ring focus:ring-green-400" required>
+            </div>
+
+            <div class="flex flex-col mb-4 bg-white p-2 rounded shadow-md min-w-1 border-2 border-gray-100">
+                <label class="text-gray-900 font-semibold">GitHub</label>
+                <input name="github" type="text" class="border border-gray-300 rounded p-2 mt-1 focus:outline-none focus:ring focus:ring-green-400">
+            </div>
+
+            <div class="flex flex-col mb-4 bg-white p-2 rounded shadow-md min-w-1 border-2 border-gray-100">
+                <label class="text-gray-900 font-semibold">LinkedIn</label>
+                <input name="linkedin" type="text" class="border border-gray-300 rounded p-2 mt-1 focus:outline-none focus:ring focus:ring-green-400">
+            </div>
+
+            <div class="flex flex-col mb-4 bg-white p-2 rounded shadow-md min-w-1 border-2 border-gray-100">
+                <label class="text-gray-900 font-semibold">Instagram</label>
+                <input name="instagram" type="text" class="border border-gray-300 rounded p-2 mt-1 focus:outline-none focus:ring focus:ring-green-400">
+            </div>
+
+            <button type="submit" class="bg-green-600 text-white w-full font-semibold rounded p-2 mt-4 hover:bg-green-700" id="submit">Kirim</button>
+            <div class="p-2 font-semibold text-center text-white animate-pulse hidden" id="load">Loading...</div>
+        </form>
+
+        <footer class="mt-3 max-w-96 w-screen max-h-96 flex flex-col">
+            <div class="flex flex-col items-center justify-center">
+                <img src="asset/Logo Protic.png" class="m-2 overflow-auto size-10">
+                <section class="font-bold font-sans">PROTIC</section>
+            </div>
+            <div class="flex flex-row my-10">
+            <div class="h-full w-full flex flex-col items-center justify-center">
+                <a href="" class="font-semibold">indra</a>
+                <a href="">indra</a>
+                <a href="">indra</a>
+            </div>
+            <div class="h-full w-full flex flex-col items-center justify-center">
+                <a href="" class="font-semibold">indra</a>
+                <a href="">indra</a>
+                <a href="">indra</a>
+            </div>
+            <div class="h-full w-full flex flex-col items-center justify-center">
+                <a href="" class="font-semibold">indra</a>
+                <a href="">indra</a>
+                <a href="">indra</a>
+            </div>
+        </div>
+        </footer>
+    </div>
+
+    <script>
+       
+         onload = function() {
+           let id = document.getElementById("loading");
+           let content = document.getElementById("content");
+           content.classList.add("hidden");
+
+           setTimeout(() => {
+             id.classList.add("hidden");
+             content.classList.remove("hidden");
+           }, 4000);
+         }
+
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwmTmRhB6dY6arJ9KmC7AQcSG2KEeQRG_NG9zsjcjGY6cAFj1mIE8LvPcv_jnxtcBIRAw/exec';
+        const form = document.forms['submit-to-google-sheet'];
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            document.getElementById("submit").classList.add("hidden");
+            document.getElementById("load").classList.remove("hidden");
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => {
+                    document.getElementById("submit").classList.remove("hidden");
+                    document.getElementById("load").classList.add("hidden");
+                    console.log('Success!', response);
+                    form.reset();
+                })
+                .catch(error => console.error('Error!', error.message));
+        });
+    </script>
+
+</body>
+</html>
