@@ -3,6 +3,9 @@ module.exports = {
   content: ["**/*.{html,js}"],
   theme: {
     extend: {
+      backgroundImage : {
+        'gojo' : "url('/asset/gojo.gif')",
+      },
       width: {
         '128': '32rem',
       },
