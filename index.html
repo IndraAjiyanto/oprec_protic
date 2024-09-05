@@ -377,10 +377,7 @@
                     document.getElementById("submit").classList.remove("hidden");
                     document.getElementById("load").classList.add("hidden");
                     console.log('Success!', response);
-
-                
                     form.reset();
-
                     window.location.href = "nextpage.html";
                 })
                 .catch(error => console.error('Error!', error.message));
