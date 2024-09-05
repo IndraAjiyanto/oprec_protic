@@ -356,16 +356,12 @@
 
        
 window.onload = function() {
-      let id = document.getElementById("loading");
+      let loading = document.getElementById("loading");
       let content = document.getElementById("content");
 
-      content.classList.add("hidden");
-
-      function loaderActive() {
-        id.classList.add("hidden");       
-        content.classList.remove("hidden"); 
-      }
-      setTimeout(loaderActive, 3000);
+      // Sembunyikan loading dan tampilkan konten setelah halaman sepenuhnya dimuat
+      loading.classList.add("hidden");
+      content.classList.remove("hidden");
     }
 
         const scriptURL = 'https://script.google.com/macros/s/AKfycbwmTmRhB6dY6arJ9KmC7AQcSG2KEeQRG_NG9zsjcjGY6cAFj1mIE8LvPcv_jnxtcBIRAw/exec';
