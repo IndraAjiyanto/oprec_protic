@@ -18,79 +18,320 @@
         <img src="asset/pamflet.png" class="mb-4 w-96 min-w-1 md:w-128 rounded text-white shadow-sm">
 
         <h1 class="text-2xl font-bold mb-4 w-96 min-w-1 md:w-128 text-center bg-green-600 p-10 rounded text-white shadow-sm">Formulir Pendaftaran</h1>
-        <form name="submit-to-google-sheet" class=" w-96 min-w-1 md:w-128 p-6 rounded-lg bg-white border-white" id="form">
+        <form name="submit-to-google-sheet" id="form" class="flex flex-col justify-center items-center">
+
+            <div class="w-96 min-w-1 md:w-128 p-6 rounded-lg bg-white border-t-8 border-slate-600 m-3">
+            
+            <div class="flex flex-col mb-4 min-w-1 bg-white p-2 rounded shadow-md border-2 border-gray-100 ">
+                <label class="text-gray-900 font-semibold">Nama <span class="text-red-600">*</span></label>
+                <input name="nama" type="text" class="border border-gray-300 rounded p-2 mt-2 focus:outline-none focus:ring focus:ring-green-400" required>
+            </div>
+
+            <div class="flex flex-col mb-4 bg-white p-2 rounded shadow-md min-w-1 border-2 border-gray-100">
+                <label class="text-gray-900 font-semibold">Nama SMA/SMK <span class="text-red-600">*</span></label>
+                <input name="nama SMA/SMK" type="text" class="border border-gray-300 rounded p-2 mt-2 focus:outline-none focus:ring focus:ring-green-400" required>
+            </div>
+
+            <div class="flex flex-col mb-4 bg-white p-2 rounded shadow-md min-w-1 border-2 border-gray-100">
+                <label class="text-gray-900 font-semibold">Jurusan SMA/SMK <span class="text-red-600">*</span></label>
+                <input name="jurusan SMA/SMK" type="text" class="border border-gray-300 rounded p-2 mt-2 focus:outline-none focus:ring focus:ring-green-400" required>
+            </div>
+
+            <div class="flex flex-col mb-4 bg-white p-2 rounded shadow-md min-w-1 border-2 border-gray-100">
+                <label class="text-gray-900 font-semibold">Prodi <span class="text-red-600">*</span></label>
+                <div class="relative mt-1">
+                    <select name="prodi" autocomplete="country-name" class="w-full border border-gray-300 rounded p-2 mt-1 focus:outline-none focus:ring focus:ring-green-400">
+                        <option disabled selected>Pilih Prodi</option>
+                        <option>Teknik Informatika</option>
+                        <option>Rekayasa Keamanan Syber</option>
+                        <option>Teknik Rekayasa Multimedia</option>
+                        <option>Akuntansi Lembaga Syariah</option>
+                        <option>Teknik Mekratronika</option>
+                        <option>Teknik Listrik</option>
+                        <option>Teknik Elektro</option>
+                        <option>Teknik Mesin</option>
+                        <option>Teknik Pernafasan</option>
+                        <option>Teknik Sipil</option>
+                        <option>Teknik Petir</option>
+                        <option>Teknik Api</option>
+                    </select>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="w-96 min-w-1 md:w-128 p-6 rounded-lg bg-white border-t-8 border-slate-600 m-3">
+            
+                <div class="flex flex-col mb-4 bg-white p-2 rounded shadow-md min-w-1 border-2 border-gray-100">
+                    <label class="text-gray-900 font-semibold mb-2">Divisi Pilihan 1 <span class="text-red-600">*</span></label>
+                    <div class="flex flex-wrap gap-3">
+                        <div class="flex items-center">
+                            <input id="divisi-web" type="radio" name="divisi-pilihan-1" value="divisi web" class="hidden peer">
+                            <label for="divisi-web" class="flex items-center cursor-pointer text-gray-600 border-2 border-gray-300 rounded-lg px-4 py-2 transition transform hover:scale-105 hover:bg-green-100 duration-200 ease-in-out peer-checked:border-green-400 peer-checked:bg-green-50">
+                                <span class="w-3 h-3 inline-block mr-2 rounded-full border-2 border-gray-300 flex-no-shrink"></span>
+                                Divisi Web
+                            </label>
+                        </div>
+                        <div class="flex items-center">
+                            <input id="divisi-uiux" type="radio" name="divisi-pilihan-1" value="divisi ui/ux" class="hidden peer">
+                            <label for="divisi-uiux" class="flex items-center cursor-pointer text-gray-600 border-2 border-gray-300 rounded-lg px-4 py-2 transition transform hover:scale-105 hover:bg-green-100 duration-200 ease-in-out peer-checked:border-green-400 peer-checked:bg-green-50">
+                                <span class="w-4 h-4 inline-block mr-2 rounded-full border-2 border-gray-300 flex-no-shrink"></span>
+                                Divisi UI/UX
+                            </label>
+                        </div>
+
+                        <div class="flex items-center">
+                            <input id="divisi-data" type="radio" name="divisi-pilihan-1" value="divisi data" class="hidden peer">
+                            <label for="divisi-data" class="flex items-center cursor-pointer text-gray-600 border-2 border-gray-300 rounded-lg px-4 py-2 transition transform hover:scale-105 hover:bg-green-100 duration-200 ease-in-out peer-checked:border-green-400 peer-checked:bg-green-50">
+                                <span class="w-4 h-4 inline-block mr-2 rounded-full border-2 border-gray-300 flex-no-shrink"></span>
+                                Divisi Data
+                            </label>
+                        </div>
+
+                        <div class="flex items-center">
+                            <input id="divisi-mobile" type="radio" name="divisi-pilihan-1" value="divisi mobile" class="hidden peer">
+                            <label for="divisi-mobile" class="flex items-center cursor-pointer text-gray-600 border-2 border-gray-300 rounded-lg px-4 py-2 transition transform hover:scale-105 hover:bg-green-100 duration-200 ease-in-out peer-checked:border-green-400 peer-checked:bg-green-50">
+                                <span class="w-4 h-4 inline-block mr-2 rounded-full border-2 border-gray-300 flex-no-shrink"></span>
+                                Divisi Mobile
+                            </label>
+                        </div>
+                   
+              
+                    <div class="flex items-center">
+                        <input id="divisi-kominfo" type="radio" name="divisi-pilihan-1" value="divisi kominfo" class="hidden peer">
+                        <label for="divisi-kominfo" class="flex items-center cursor-pointer text-gray-600 border-2 border-gray-300 rounded-lg px-4 py-2 transition transform hover:scale-105 hover:bg-green-100 duration-200 ease-in-out peer-checked:border-green-400 peer-checked:bg-green-50">
+                            <span class="w-4 h-4 inline-block mr-2 rounded-full border-2 border-gray-300 flex-no-shrink"></span>
+                            Divisi Kominfo
+                        </label>
+                    </div>
+               
+                    <div class="flex items-center">
+                        <input id="divisi-humas" type="radio" name="divisi-pilihan-1" value="divisi humas" class="hidden peer">
+                        <label for="divisi-humas" class="flex items-center cursor-pointer text-gray-600 border-2 border-gray-300 rounded-lg px-4 py-2 transition transform hover:scale-105 hover:bg-green-100 duration-200 ease-in-out peer-checked:border-green-400 peer-checked:bg-green-50">
+                            <span class="w-4 h-4 inline-block mr-2 rounded-full border-2 border-gray-300 flex-no-shrink"></span>
+                            Divisi Humas
+                        </label>
+                    </div>
+                    <div class="flex items-center">
+                        <input id="sekertaris" type="radio" name="divisi-pilihan-1" value="sekertaris" class="hidden peer">
+                        <label for="sekertaris" class="flex items-center cursor-pointer text-gray-600 border-2 border-gray-300 rounded-lg px-4 py-2 transition transform hover:scale-105 hover:bg-green-100 duration-200 ease-in-out peer-checked:border-green-400 peer-checked:bg-green-50">
+                            <span class="w-4 h-4 inline-block mr-2 rounded-full border-2 border-gray-300 flex-no-shrink"></span>
+                            Sekertaris
+                        </label>
+                    </div>
+
+                    <div class="flex items-center">
+                        <input id="bendahara" type="radio" name="divisi-pilihan-1" value="bendahara" class="hidden peer">
+                        <label for="bendahara" class="flex items-center cursor-pointer text-gray-600 border-2 border-gray-300 rounded-lg px-4 py-2 transition transform hover:scale-105 hover:bg-green-100 duration-200 ease-in-out peer-checked:border-green-400 peer-checked:bg-green-50">
+                            <span class="w-4 h-4 inline-block mr-2 rounded-full border-2 border-gray-300 flex-no-shrink"></span>
+                            Bendahara
+                        </label>
+                    </div>
+                    </div>
+                    </div>
+               
+            
+            
+
+             
+
+                  
+            
+                        <div class="flex flex-col mb-4 bg-white p-2 rounded shadow-md min-w-1 border-2 border-gray-100">
+                            <label class="text-gray-900 font-semibold mb-2">Divisi Pilihan 2 <span class="text-red-600">*</span></label>
+                            <div class="flex flex-wrap gap-3">
+                                <div class="flex items-center">
+                                    <input id="divisi-web-2" type="radio" name="divisi-pilihan-2" value="divisi web" class="hidden peer">
+                                    <label for="divisi-web-2" class="flex items-center cursor-pointer text-gray-600 border-2 border-gray-300 rounded-lg px-4 py-2 transition transform hover:scale-105 hover:bg-green-100 duration-200 ease-in-out peer-checked:border-green-400 peer-checked:bg-green-50">
+                                        <span class="w-4 h-4 inline-block mr-2 rounded-full border-2 border-gray-300 flex-no-shrink"></span>
+                                        Divisi Web
+                                    </label>
+                                </div>
+                                <div class="flex items-center">
+                                    <input id="divisi-uiux-2" type="radio" name="divisi-pilihan-2" value="divisi ui/ux" class="hidden peer">
+                                    <label for="divisi-uiux-2" class="flex items-center cursor-pointer text-gray-600 border-2 border-gray-300 rounded-lg px-4 py-2 transition transform hover:scale-105 hover:bg-green-100 duration-200 ease-in-out peer-checked:border-green-400 peer-checked:bg-green-50">
+                                        <span class="w-4 h-4 inline-block mr-2 rounded-full border-2 border-gray-300 flex-no-shrink"></span>
+                                        Divisi UI/UX
+                                    </label>
+                                </div>
+        
+                                <div class="flex items-center">
+                                    <input id="divisi-data-2" type="radio" name="divisi-pilihan-2" value="divisi data" class="hidden peer">
+                                    <label for="divisi-data-2" class="flex items-center cursor-pointer text-gray-600 border-2 border-gray-300 rounded-lg px-4 py-2 transition transform hover:scale-105 hover:bg-green-100 duration-200 ease-in-out peer-checked:border-green-400 peer-checked:bg-green-50">
+                                        <span class="w-4 h-4 inline-block mr-2 rounded-full border-2 border-gray-300 flex-no-shrink"></span>
+                                        Divisi Data
+                                    </label>
+                                </div>
+        
+                                <div class="flex items-center">
+                                    <input id="divisi-mobile-2" type="radio" name="divisi-pilihan-2" value="divisi mobile" class="hidden peer">
+                                    <label for="divisi-mobile-2" class="flex items-center cursor-pointer text-gray-600 border-2 border-gray-300 rounded-lg px-4 py-2 transition transform hover:scale-105 hover:bg-green-100 duration-200 ease-in-out peer-checked:border-green-400 peer-checked:bg-green-50">
+                                        <span class="w-4 h-4 inline-block mr-2 rounded-full border-2 border-gray-300 flex-no-shrink"></span>
+                                        Divisi Mobile
+                                    </label>
+                                </div>
+                           
+                      
+                            <div class="flex items-center">
+                                <input id="divisi-kominfo-2" type="radio" name="divisi-pilihan-2" value="divisi kominfo" class="hidden peer">
+                                <label for="divisi-kominfo-2" class="flex items-center cursor-pointer text-gray-600 border-2 border-gray-300 rounded-lg px-4 py-2 transition transform hover:scale-105 hover:bg-green-100 duration-200 ease-in-out peer-checked:border-green-400 peer-checked:bg-green-50">
+                                    <span class="w-4 h-4 inline-block mr-2 rounded-full border-2 border-gray-300 flex-no-shrink"></span>
+                                    Divisi Kominfo
+                                </label>
+                            </div>
+                       
+                            <div class="flex items-center">
+                                <input id="divisi-humas-2" type="radio" name="divisi-pilihan-2" value="divisi humas" class="hidden peer">
+                                <label for="divisi-humas-2" class="flex items-center cursor-pointer text-gray-600 border-2 border-gray-300 rounded-lg px-4 py-2 transition transform hover:scale-105 hover:bg-green-100 duration-200 ease-in-out peer-checked:border-green-400 peer-checked:bg-green-50">
+                                    <span class="w-4 h-4 inline-block mr-2 rounded-full border-2 border-gray-300 flex-no-shrink"></span>
+                                    Divisi Humas
+                                </label>
+                            </div>
+                            <div class="flex items-center">
+                                <input id="sekertaris-2" type="radio" name="divisi-pilihan-2" value="sekertaris" class="hidden peer">
+                                <label for="sekertaris-2" class="flex items-center cursor-pointer text-gray-600 border-2 border-gray-300 rounded-lg px-4 py-2 transition transform hover:scale-105 hover:bg-green-100 duration-200 ease-in-out peer-checked:border-green-400 peer-checked:bg-green-50">
+                                    <span class="w-4 h-4 inline-block mr-2 rounded-full border-2 border-gray-300 flex-no-shrink"></span>
+                                    Sekertaris
+                                </label>
+                            </div>
+        
+                            <div class="flex items-center">
+                                <input id="bendahara-2" type="radio" name="divisi-pilihan-2" value="bendahara" class="hidden peer">
+                                <label for="bendahara-2" class="flex items-center cursor-pointer text-gray-600 border-2 border-gray-300 rounded-lg px-4 py-2 transition transform hover:scale-105 hover:bg-green-100 duration-200 ease-in-out peer-checked:border-green-400 peer-checked:bg-green-50">
+                                    <span class="w-4 h-4 inline-block mr-2 rounded-full border-2 border-gray-300 flex-no-shrink"></span>
+                                    Bendahara
+                                </label>
+                            </div>
+                            </div>
+                            </div>
+
+
+                            
+                            <div class="flex flex-col mb-4 bg-white p-2 rounded shadow-md min-w-1 border-2 border-gray-100">
+                                <label class="text-gray-900 font-semibold mb-2">Divisi Pilihan 3 <span class="text-red-600">*</span></label>
+                                <div class="flex flex-wrap gap-3">
+                                    <div class="flex items-center">
+                                        <input id="divisi-web-3" type="radio" name="divisi-pilihan-3" value="divisi web" class="hidden peer">
+                                        <label for="divisi-web-3" class="flex items-center cursor-pointer text-gray-600 border-2 border-gray-300 rounded-lg px-4 py-2 transition transform hover:scale-105 hover:bg-green-100 duration-200 ease-in-out peer-checked:border-green-400 peer-checked:bg-green-50">
+                                            <span class="w-4 h-4 inline-block mr-2 rounded-full border-2 border-gray-300 flex-no-shrink peer-checked:bg-green-400 peer-checked:border-green-400 transition-colors duration-200"></span>
+                                            Divisi Web
+                                        </label>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <input id="divisi-uiux-3" type="radio" name="divisi-pilihan-3" value="divisi ui/ux" class="hidden peer">
+                                        <label for="divisi-uiux-3" class="flex items-center cursor-pointer text-gray-600 border-2 border-gray-300 rounded-lg px-4 py-2 transition transform hover:scale-105 hover:bg-green-100 duration-200 ease-in-out peer-checked:border-green-400 peer-checked:bg-green-50">
+                                            <span class="w-4 h-4 inline-block mr-2 rounded-full border-2 border-gray-300 flex-no-shrink peer-checked:bg-green-400 peer-checked:border-green-400 transition-colors duration-200"></span>
+                                            Divisi UI/UX
+                                        </label>
+                                    </div>
+                            
+                                    <div class="flex items-center">
+                                        <input id="divisi-data-3" type="radio" name="divisi-pilihan-3" value="divisi data" class="hidden peer">
+                                        <label for="divisi-data-3" class="flex items-center cursor-pointer text-gray-600 border-2 border-gray-300 rounded-lg px-4 py-2 transition transform hover:scale-105 hover:bg-green-100 duration-200 ease-in-out peer-checked:border-green-400 peer-checked:bg-green-50">
+                                            <span class="w-4 h-4 inline-block mr-2 rounded-full border-2 border-gray-300 flex-no-shrink peer-checked:bg-green-400 peer-checked:border-green-400 transition-colors duration-200"></span>
+                                            Divisi Data
+                                        </label>
+                                    </div>
+                            
+                                    <div class="flex items-center">
+                                        <input id="divisi-mobile-3" type="radio" name="divisi-pilihan-3" value="divisi mobile" class="hidden peer">
+                                        <label for="divisi-mobile-3" class="flex items-center cursor-pointer text-gray-600 border-2 border-gray-300 rounded-lg px-4 py-2 transition transform hover:scale-105 hover:bg-green-100 duration-200 ease-in-out peer-checked:border-green-400 peer-checked:bg-green-50">
+                                            <span class="w-4 h-4 inline-block mr-2 rounded-full border-2 border-gray-300 flex-no-shrink peer-checked:bg-green-400 peer-checked:border-green-400 transition-colors duration-200"></span>
+                                            Divisi Mobile
+                                        </label>
+                                    </div>
+                            
+                                    <div class="flex items-center">
+                                        <input id="divisi-kominfo-3" type="radio" name="divisi-pilihan-3" value="divisi kominfo" class="hidden peer">
+                                        <label for="divisi-kominfo-3" class="flex items-center cursor-pointer text-gray-600 border-2 border-gray-300 rounded-lg px-4 py-2 transition transform hover:scale-105 hover:bg-green-100 duration-200 ease-in-out peer-checked:border-green-400 peer-checked:bg-green-50">
+                                            <span class="w-4 h-4 inline-block mr-2 rounded-full border-2 border-gray-300 flex-no-shrink peer-checked:bg-green-400 peer-checked:border-green-400 transition-colors duration-200"></span>
+                                            Divisi Kominfo
+                                        </label>
+                                    </div>
+                            
+                                    <div class="flex items-center">
+                                        <input id="divisi-humas-3" type="radio" name="divisi-pilihan-3" value="divisi humas" class="hidden peer">
+                                        <label for="divisi-humas-3" class="flex items-center cursor-pointer text-gray-600 border-2 border-gray-300 rounded-lg px-4 py-2 transition transform hover:scale-105 hover:bg-green-100 duration-200 ease-in-out peer-checked:border-green-400 peer-checked:bg-green-50">
+                                            <span class="w-4 h-4 inline-block mr-2 rounded-full border-2 border-gray-300 flex-no-shrink peer-checked:bg-green-400 peer-checked:border-green-400 transition-colors duration-200"></span>
+                                            Divisi Humas
+                                        </label>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <input id="sekertaris-3" type="radio" name="divisi-pilihan-3" value="sekertaris" class="hidden peer">
+                                        <label for="sekertaris-3" class="flex items-center cursor-pointer text-gray-600 border-2 border-gray-300 rounded-lg px-4 py-2 transition transform hover:scale-105 hover:bg-green-100 duration-200 ease-in-out peer-checked:border-green-400 peer-checked:bg-green-50">
+                                            <span class="w-4 h-4 inline-block mr-2 rounded-full border-2 border-gray-300 flex-no-shrink peer-checked:bg-green-400 peer-checked:border-green-400 transition-colors duration-200"></span>
+                                            Sekertaris
+                                        </label>
+                                    </div>
+                            
+                                    <div class="flex items-center">
+                                        <input id="bendahara-3" type="radio" name="divisi-pilihan-3" value="bendahara" class="hidden peer">
+                                        <label for="bendahara-3" class="flex items-center cursor-pointer text-gray-600 border-2 border-gray-300 rounded-lg px-4 py-2 transition transform hover:scale-105 hover:bg-green-100 duration-200 ease-in-out peer-checked:border-green-400 peer-checked:bg-green-50">
+                                            <span class="w-4 h-4 inline-block mr-2 rounded-full border-2 border-gray-300 flex-no-shrink peer-checked:bg-green-400 peer-checked:border-green-400 transition-colors duration-200"></span>
+                                            Bendahara
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <script>
+                                document.querySelectorAll('input[type="radio"]').forEach(function(radio) {
+                                    radio.addEventListener('change', function() {
+                                        this.closest('.flex').classList.add('scale-110');
+                                        setTimeout(() => {
+                                            this.closest('.flex').classList.remove('scale-110');
+                                        }, 200);
+                                    });
+                                });
+                            </script>
+                            
+
+        </div>
+
           
 
             
-            <div class="flex flex-col mb-4 min-w-1 bg-white p-2 rounded shadow-md border-2 border-gray-100">
-                <label class="text-gray-900 font-semibold">Nama</label>
-                <input name="nama" type="text" class="border border-gray-300 rounded p-2 mt-1 focus:outline-none focus:ring focus:ring-green-400" required>
+            <div class="w-96 min-w-1 md:w-128 p-6 rounded-lg bg-white border-t-8 border-slate-600 m-3">
+            <div class="flex flex-col mb-4 bg-white p-2 rounded shadow-md min-w-1 border-2 border-gray-100">
+                <label class="text-gray-900 font-semibold">No WA <span class="text-red-600">*</span></label>
+                <input name="no wa" type="number" class="border border-gray-300 rounded p-2 mt-2 focus:outline-none focus:ring focus:ring-green-400" required>
+
             </div>
 
             <div class="flex flex-col mb-4 bg-white p-2 rounded shadow-md min-w-1 border-2 border-gray-100">
-                <label class="text-gray-900 font-semibold">Nama SMA/SMK</label>
-                <input name="nama SMA/SMK" type="text" class="border border-gray-300 rounded p-2 mt-1 focus:outline-none focus:ring focus:ring-green-400" required>
-            </div>
-
-            <div class="flex flex-col mb-4 bg-white p-2 rounded shadow-md min-w-1 border-2 border-gray-100">
-                <label class="text-gray-900 font-semibold">Jurusan SMA/SMK</label>
-                <input name="jurusan SMA/SMK" type="text" class="border border-gray-300 rounded p-2 mt-1 focus:outline-none focus:ring focus:ring-green-400" required>
-            </div>
-
-            <div class="flex flex-col mb-4 bg-white p-2 rounded shadow-md min-w-1 border-2 border-gray-100">
-                <label class="text-gray-900 font-semibold">Prodi</label>
-                <input name="prodi" type="text" class="border border-gray-300 rounded p-2 mt-1 focus:outline-none focus:ring focus:ring-green-400" required>
-            </div>
-
-            <div class="flex flex-col mb-4 bg-white p-2 rounded shadow-md min-w-1 border-2 border-gray-100">
-                <label class="text-gray-900 font-semibold">Divisi Pilihan 1</label>
-                <input name="divisi pilihan 1" type="text" class="border border-gray-300 rounded p-2 mt-1 focus:outline-none focus:ring focus:ring-green-400" required>
-            </div>
-
-            <div class="flex flex-col mb-4 bg-white p-2 rounded shadow-md min-w-1 border-2 border-gray-100">
-                <label class="text-gray-900 font-semibold">Divisi Pilihan 2</label>
-                <input name="divisi pilihan 2" type="text" class="border border-gray-300 rounded p-2 mt-1 focus:outline-none focus:ring focus:ring-green-400" required>
-            </div>
-
-            <div class="flex flex-col mb-4 bg-white p-2 rounded shadow-md min-w-1 border-2 border-gray-100">
-                <label class="text-gray-900 font-semibold">Divisi Pilihan 3</label>
-                <input name="divisi pilihan 3" type="text" class="border border-gray-300 rounded p-2 mt-1 focus:outline-none focus:ring focus:ring-green-400" required>
-            </div>
-
-            <div class="flex flex-col mb-4 bg-white p-2 rounded shadow-md min-w-1 border-2 border-gray-100">
-
-                <label class="text-gray-900 font-semibold">Divisi Pilihan 4</label>
-                <input name="divisi pilihan 2" type="text" class="border border-gray-300 rounded p-2 mt-1 focus:outline-none focus:ring focus:ring-green-400" required>
-            </div>
-
-            <div class="flex flex-col mb-4 bg-white p-2 rounded shadow-md min-w-1 border-2 border-gray-100">
-                <label class="text-gray-900 font-semibold">No WA</label>
-                <input name="no wa" type="text" class="border border-gray-300 rounded p-2 mt-1 focus:outline-none focus:ring focus:ring-green-400" required>
-            </div>
-
-            <div class="flex flex-col mb-4 bg-white p-2 rounded shadow-md min-w-1 border-2 border-gray-100">
-                <label class="text-gray-900 font-semibold">Email Aktif</label>
-                <input name="email aktif" type="text" class="border border-gray-300 rounded p-2 mt-1 focus:outline-none focus:ring focus:ring-green-400" required>
+                <label class="text-gray-900 font-semibold">Email Aktif <span class="text-red-600">*</span></label>
+                <input name="email aktif" type="text" class="border border-gray-300 rounded p-2 mt-2 focus:outline-none focus:ring focus:ring-green-400" required>
             </div>
 
             <div class="flex flex-col mb-4 bg-white p-2 rounded shadow-md min-w-1 border-2 border-gray-100">
                 <label class="text-gray-900 font-semibold">GitHub</label>
-                <input name="github" type="text" class="border border-gray-300 rounded p-2 mt-1 focus:outline-none focus:ring focus:ring-green-400">
+                <input name="github" type="text" class="border border-gray-300 rounded p-2 mt-2 focus:outline-none focus:ring focus:ring-green-400">
             </div>
 
             <div class="flex flex-col mb-4 bg-white p-2 rounded shadow-md min-w-1 border-2 border-gray-100">
                 <label class="text-gray-900 font-semibold">LinkedIn</label>
-                <input name="linkedin" type="text" class="border border-gray-300 rounded p-2 mt-1 focus:outline-none focus:ring focus:ring-green-400">
+                <input name="linkedin" type="text" class="border border-gray-300 rounded p-2 mt-2 focus:outline-none focus:ring focus:ring-green-400">
             </div>
 
             <div class="flex flex-col mb-4 bg-white p-2 rounded shadow-md min-w-1 border-2 border-gray-100">
                 <label class="text-gray-900 font-semibold">Instagram</label>
-                <input name="instagram" type="text" class="border border-gray-300 rounded p-2 mt-1 focus:outline-none focus:ring focus:ring-green-400">
+                <input name="instagram" type="text" class="border border-gray-300 rounded p-2 mt-2 focus:outline-none focus:ring focus:ring-green-400">
             </div>
+        </div>
 
-            <button type="submit" class="bg-green-600 text-white w-full font-semibold rounded p-2 mt-4 hover:bg-green-700" id="submit">Kirim</button>
+        <button 
+        type="submit" 
+        class="bg-green-600 text-white font-semibold rounded p-2 mt-4 w-96 md:w-128 transition transform hover:bg-green-700 hover:scale-105 hover:shadow-lg active:scale-95 focus:outline-none focus:ring-4 focus:ring-green-300" 
+        id="submit">
+        Kirim
+    </button>
+    
             <div class="p-2 font-semibold text-center text-white animate-pulse hidden" id="load">Loading...</div>
+
+        
         </form>
+
 
         <footer class=" mt-10 max-w-full w-screen max-h-96 flex flex-col">
             <div class="flex flex-col items-center justify-center mb-3">
@@ -112,17 +353,16 @@
     </div>
 
     <script>
-       
-         onload = function() {
-           let id = document.getElementById("loading");
-           let content = document.getElementById("content");
-           content.classList.add("hidden");
 
-           setTimeout(() => {
-             id.classList.add("hidden");
-             content.classList.remove("hidden");
-           }, 4000);
-         }
+       
+window.onload = function() {
+      let loading = document.getElementById("loading");
+      let content = document.getElementById("content");
+
+      // Sembunyikan loading dan tampilkan konten setelah halaman sepenuhnya dimuat
+      loading.classList.add("hidden");
+      content.classList.remove("hidden");
+    }
 
         const scriptURL = 'https://script.google.com/macros/s/AKfycbwmTmRhB6dY6arJ9KmC7AQcSG2KEeQRG_NG9zsjcjGY6cAFj1mIE8LvPcv_jnxtcBIRAw/exec';
         const form = document.forms['submit-to-google-sheet'];
@@ -136,10 +376,7 @@
                     document.getElementById("submit").classList.remove("hidden");
                     document.getElementById("load").classList.add("hidden");
                     console.log('Success!', response);
-
-                
                     form.reset();
-
                     window.location.href = "nextpage.html";
                 })
                 .catch(error => console.error('Error!', error.message));
