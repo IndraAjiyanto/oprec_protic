@@ -4,40 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="src/output.css" rel="stylesheet">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
     <title>Document</title>
 </head>
-<body class="bg-green-300">
+<body class="bg-gelap_protic">
 
     <div id="loading" class="fixed inset-0 bg-white bg-opacity-75 flex items-center justify-center z-50">
         <img src="asset/Logo Protic.png" alt="Loading..." class="h-16 w-16 animate-bounce">
     </div>
     
-
-    <div class="flex flex-col items-center justify-center min-h-screen max-w-full" id="content">
+    <div id="content" class="hidden">
+    <div class="flex flex-col items-center justify-center min-h-screen max-w-full" >
         <img src="asset/Logo Protic.png" class="m-5 overflow-auto size-40 animate-melayang">
         <img src="asset/pamflet.png" class="mb-4 w-96 min-w-1 md:w-128 rounded text-white shadow-sm">
 
         <h1 class="text-2xl font-bold mb-4 w-96 min-w-1 md:w-128 text-center bg-green-600 p-10 rounded text-white shadow-sm">Formulir Pendaftaran</h1>
         <form name="submit-to-google-sheet" id="form" class="flex flex-col justify-center items-center">
 
-            <div class="w-96 min-w-1 md:w-128 p-6 rounded-lg bg-white border-t-8 border-slate-600 m-3">
+            <div class="w-96 min-w-1 md:w-128 p-6 rounded-lg bg-white border-t-8 border-muda_protic m-3">
             
-            <div class="flex flex-col mb-4 min-w-1 bg-white p-2 rounded shadow-md border-2 border-gray-100 ">
+            <div class="animate__animated animate__bounceIn flex flex-col mb-4 min-w-1 bg-white p-2 rounded shadow-md border-2 border-gray-100 ">
                 <label class="text-gray-900 font-semibold">Nama <span class="text-red-600">*</span></label>
                 <input name="nama" type="text" class="border border-gray-300 rounded p-2 mt-2 focus:outline-none focus:ring focus:ring-green-400" required>
             </div>
 
             <div class="flex flex-col mb-4 bg-white p-2 rounded shadow-md min-w-1 border-2 border-gray-100">
-                <label class="text-gray-900 font-semibold">Nama SMA/SMK <span class="text-red-600">*</span></label>
-                <input name="nama SMA/SMK" type="text" class="border border-gray-300 rounded p-2 mt-2 focus:outline-none focus:ring focus:ring-green-400" required>
+                <label class="text-gray-900 font-semibold">NIM <span class="text-red-600">*</span></label>
+                <input name="nim" type="text" class="border border-gray-300 rounded p-2 mt-2 focus:outline-none focus:ring focus:ring-green-400" required>
             </div>
 
             <div class="flex flex-col mb-4 bg-white p-2 rounded shadow-md min-w-1 border-2 border-gray-100">
-                <label class="text-gray-900 font-semibold">Jurusan SMA/SMK <span class="text-red-600">*</span></label>
-                <input name="jurusan SMA/SMK" type="text" class="border border-gray-300 rounded p-2 mt-2 focus:outline-none focus:ring focus:ring-green-400" required>
+                <label class="text-gray-900 font-semibold">Kelas <span class="text-red-600">*</span></label>
+                <input name="kelas" type="text" class="border border-gray-300 rounded p-2 mt-2 focus:outline-none focus:ring focus:ring-green-400" required>
             </div>
 
             <div class="flex flex-col mb-4 bg-white p-2 rounded shadow-md min-w-1 border-2 border-gray-100">
+                <label class="text-gray-900 font-semibold">Semester <span class="text-red-600">*</span></label>
+                <input name="semester" type="text" class="border border-gray-300 rounded p-2 mt-2 focus:outline-none focus:ring focus:ring-green-400" required>
+            </div>
+            
+
+            <!-- <div class="flex flex-col mb-4 bg-white p-2 rounded shadow-md min-w-1 border-2 border-gray-100">
                 <label class="text-gray-900 font-semibold">Prodi <span class="text-red-600">*</span></label>
                 <div class="relative mt-1">
                     <select name="prodi" autocomplete="country-name" class="w-full border border-gray-300 rounded p-2 mt-1 focus:outline-none focus:ring focus:ring-green-400">
@@ -56,108 +66,109 @@
                         <option>Teknik Api</option>
                     </select>
                 </div>
-            </div>
+            </div> -->
 
         </div>
 
 
-        <div class="w-96 min-w-1 md:w-128 p-6 rounded-lg bg-white border-t-8 border-slate-600 m-3">
+        <div class="w-96 min-w-1 md:w-128 p-6 rounded-lg bg-white border-t-8 border-muda_protic m-3">
+
+                <div class="flex flex-col mb-4 bg-white p-2 rounded shadow-md min-w-1 border-2 border-gray-100">
+                    <label class="text-gray-900 font-semibold">CV <span class="text-red-600">*</span></label>
+                    <input name="cv" type="number" class="border border-gray-300 rounded p-2 mt-2 focus:outline-none focus:ring focus:ring-green-400" required>
+    
+                </div>
+
             <div class="flex flex-col mb-4 bg-white p-2 rounded shadow-md min-w-1 border-2 border-gray-100">
-                <label class="text-gray-900 font-semibold mb-2">Pilih 3 Devisi <span class="text-red-600">*</span></label>
+                <label class="text-gray-900 font-semibold mb-2">Pilih 2 Divisi <span class="text-red-600">*</span></label>
                 <div class="flex flex-wrap gap-3">
-                    <!-- Divisi Web -->
+ 
                     <div class="flex items-center">
                         <input id="divisi-web" type="checkbox" name="divisi-pilihan" value="divisi web" class="hidden peer">
-                        <label for="divisi-web" class="flex items-center cursor-pointer text-gray-600 border-2 border-gray-300 rounded-lg px-4 py-2 transition transform hover:scale-105 hover:bg-green-100 duration-200 ease-in-out peer-checked:border-green-400 peer-checked:bg-green-50">
-                            <span class="w-4 h-4 inline-block mr-2 rounded-full border-2 border-gray-300 flex-no-shrink peer-checked:bg-green-500"></span>
+                        <label for="divisi-web" class="select-none flex items-center cursor-pointer text-gray-600 border-2 border-gray-300 rounded-lg px-4 py-2 transition transform hover:scale-105 hover:bg-green-100 duration-200 ease-in-out peer-checked:border-green-400 peer-checked:bg-green-50 peer-checked:scale-105">
                             Divisi Web
                         </label>
+                        <span class="w-4 h-10 hidden mr-2 rounded-r-lg flex-no-shrink peer-checked:bg-green-500 peer-checked:inline-block"></span>
                     </div>
         
-                    <!-- Divisi UI/UX -->
                     <div class="flex items-center">
                         <input id="divisi-uiux" type="checkbox" name="divisi-pilihan" value="divisi ui/ux" class="hidden peer">
-                        <label for="divisi-uiux" class="flex items-center cursor-pointer text-gray-600 border-2 border-gray-300 rounded-lg px-4 py-2 transition transform hover:scale-105 hover:bg-green-100 duration-200 ease-in-out peer-checked:border-green-400 peer-checked:bg-green-50">
-                            <span class="w-4 h-4 inline-block mr-2 rounded-full border-2 border-gray-300 flex-no-shrink peer-checked:bg-green-500"></span>
+                        <label for="divisi-uiux" class="select-none flex items-center cursor-pointer text-gray-600 border-2 border-gray-300 rounded-lg px-4 py-2 transition transform hover:scale-105 hover:bg-green-100 duration-200 ease-in-out peer-checked:border-green-400 peer-checked:bg-green-50 peer-checked:scale-105">
                             Divisi UI/UX
                         </label>
+                        <span class="w-4 h-10 hidden mr-2 rounded-r-lg flex-no-shrink peer-checked:bg-green-500 peer-checked:inline-block"></span>
                     </div>
         
-                    <!-- Divisi Data -->
                     <div class="flex items-center">
                         <input id="divisi-data" type="checkbox" name="divisi-pilihan" value="divisi data" class="hidden peer">
-                        <label for="divisi-data" class="flex items-center cursor-pointer text-gray-600 border-2 border-gray-300 rounded-lg px-4 py-2 transition transform hover:scale-105 hover:bg-green-100 duration-200 ease-in-out peer-checked:border-green-400 peer-checked:bg-green-50">
-                            <span class="w-4 h-4 inline-block mr-2 rounded-full border-2 border-gray-300 flex-no-shrink peer-checked:bg-green-500"></span>
+                        <label for="divisi-data" class="select-none flex items-center cursor-pointer text-gray-600 border-2 border-gray-300 rounded-lg px-4 py-2 transition transform hover:scale-105 hover:bg-green-100 duration-200 ease-in-out peer-checked:border-green-400 peer-checked:bg-green-50 peer-checked:scale-105">
                             Divisi Data
                         </label>
+                        <span class="w-4 h-10 hidden mr-2 rounded-r-lg flex-no-shrink peer-checked:bg-green-500 peer-checked:inline-block"></span>
                     </div>
 
                     <div class="flex items-center">
                         <input id="divisi-mobile" type="checkbox" name="divisi-pilihan" value="divisi data" class="hidden peer">
-                        <label for="divisi-mobile" class="flex items-center cursor-pointer text-gray-600 border-2 border-gray-300 rounded-lg px-4 py-2 transition transform hover:scale-105 hover:bg-green-100 duration-200 ease-in-out peer-checked:border-green-400 peer-checked:bg-green-50">
-                            <span class="w-4 h-4 inline-block mr-2 rounded-full border-2 border-gray-300 flex-no-shrink peer-checked:bg-green-500"></span>
+                        <label for="divisi-mobile" class="select-none flex items-center cursor-pointer text-gray-600 border-2 border-gray-300 rounded-lg px-4 py-2 transition transform hover:scale-105 hover:bg-green-100 duration-200 ease-in-out peer-checked:border-green-400 peer-checked:bg-green-50 peer-checked:scale-105">
                             Divisi Mobile
                         </label>
+                        <span class="w-4 h-10 hidden mr-2 rounded-r-lg flex-no-shrink peer-checked:bg-green-500 peer-checked:inline-block"></span>
                     </div>
 
                     <div class="flex items-center">
                         <input id="divisi-devops" type="checkbox" name="divisi-pilihan" value="divisi data" class="hidden peer">
-                        <label for="divisi-devops" class="flex items-center cursor-pointer text-gray-600 border-2 border-gray-300 rounded-lg px-4 py-2 transition transform hover:scale-105 hover:bg-green-100 duration-200 ease-in-out peer-checked:border-green-400 peer-checked:bg-green-50">
-                            <span class="w-4 h-4 inline-block mr-2 rounded-full border-2 border-gray-300 flex-no-shrink peer-checked:bg-green-500"></span>
+                        <label for="divisi-devops" class="select-none flex items-center cursor-pointer text-gray-600 border-2 border-gray-300 rounded-lg px-4 py-2 transition transform hover:scale-105 hover:bg-green-100 duration-200 ease-in-out peer-checked:border-green-400 peer-checked:bg-green-50 peer-checked:scale-105">
                             Divisi DevOps
                         </label>
+                        <span class="w-4 h-10 hidden mr-2 rounded-r-lg flex-no-shrink peer-checked:bg-green-500 peer-checked:inline-block"></span>
                     </div>
 
                     <div class="flex items-center">
                         <input id="divisi-kominfo" type="checkbox" name="divisi-pilihan" value="divisi data" class="hidden peer">
-                        <label for="divisi-kominfo" class="flex items-center cursor-pointer text-gray-600 border-2 border-gray-300 rounded-lg px-4 py-2 transition transform hover:scale-105 hover:bg-green-100 duration-200 ease-in-out peer-checked:border-green-400 peer-checked:bg-green-50">
-                            <span class="w-4 h-4 inline-block mr-2 rounded-full border-2 border-gray-300 flex-no-shrink peer-checked:bg-green-500"></span>
+                        <label for="divisi-kominfo" class="select-none flex items-center cursor-pointer text-gray-600 border-2 border-gray-300 rounded-lg px-4 py-2 transition transform hover:scale-105 hover:bg-green-100 duration-200 ease-in-out peer-checked:border-green-400 peer-checked:bg-green-50 peer-checked:scale-105">
                             Divisi Kominfo
                         </label>
+                        <span class="w-4 h-10 hidden mr-2 rounded-r-lg flex-no-shrink peer-checked:bg-green-500 peer-checked:inline-block"></span>
                     </div>
 
                     <div class="flex items-center">
                         <input id="divisi-humas" type="checkbox" name="divisi-pilihan" value="divisi data" class="hidden peer">
-                        <label for="divisi-humas" class="flex items-center cursor-pointer text-gray-600 border-2 border-gray-300 rounded-lg px-4 py-2 transition transform hover:scale-105 hover:bg-green-100 duration-200 ease-in-out peer-checked:border-green-400 peer-checked:bg-green-50">
-                            <span class="w-4 h-4 inline-block mr-2 rounded-full border-2 border-gray-300 flex-no-shrink peer-checked:bg-green-500"></span>
+                        <label for="divisi-humas" class="select-none flex items-center cursor-pointer text-gray-600 border-2 border-gray-300 rounded-lg px-4 py-2 transition transform hover:scale-105 hover:bg-green-100 duration-200 ease-in-out peer-checked:border-green-400 peer-checked:bg-green-50 peer-checked:scale-105">
                             Divisi Humas
                         </label>
+                        <span class="w-4 h-10 hidden mr-2 rounded-r-lg flex-no-shrink peer-checked:bg-green-500 peer-checked:inline-block"></span>
                     </div>
 
                     <div class="flex items-center">
                         <input id="divisi-sekretaris" type="checkbox" name="divisi-pilihan" value="divisi data" class="hidden peer">
-                        <label for="divisi-sekretaris" class="flex items-center cursor-pointer text-gray-600 border-2 border-gray-300 rounded-lg px-4 py-2 transition transform hover:scale-105 hover:bg-green-100 duration-200 ease-in-out peer-checked:border-green-400 peer-checked:bg-green-50">
-                            <span class="w-4 h-4 inline-block mr-2 rounded-full border-2 border-gray-300 flex-no-shrink peer-checked:bg-green-500"></span>
-                            Divisi Sekretaris
+                        <label for="divisi-sekretaris" class="select-none flex items-center cursor-pointer text-gray-600 border-2 border-gray-300 rounded-lg px-4 py-2 transition transform hover:scale-105 hover:bg-green-100 duration-200 ease-in-out peer-checked:border-green-400 peer-checked:bg-green-50 peer-checked:scale-105">
+                            Sekretaris
                         </label>
+                        <span class="w-4 h-10 hidden mr-2 rounded-r-lg flex-no-shrink peer-checked:bg-green-500 peer-checked:inline-block"></span>
                     </div>
 
                     <div class="flex items-center">
                         <input id="divisi-bendahara" type="checkbox" name="divisi-pilihan" value="divisi data" class="hidden peer">
-                        <label for="divisi-bendahara" class="flex items-center cursor-pointer text-gray-600 border-2 border-gray-300 rounded-lg px-4 py-2 transition transform hover:scale-105 hover:bg-green-100 duration-200 ease-in-out peer-checked:border-green-400 peer-checked:bg-green-50">
-                            <span class="w-4 h-4 inline-block mr-2 rounded-full border-2 border-gray-300 flex-no-shrink peer-checked:bg-green-500"></span>
-                            Divisi Bendahara
+                        <label for="divisi-bendahara" class="select-none flex items-center cursor-pointer text-gray-600 border-2 border-gray-300 rounded-lg px-4 py-2 transition transform hover:scale-105 hover:bg-green-100 duration-200 ease-in-out peer-checked:border-green-400 peer-checked:bg-green-50 peer-checked:scale-105">
+                            Bendahara
                         </label>
+                        <span class="w-4 h-10 hidden mr-2 rounded-r-lg flex-no-shrink peer-checked:bg-green-500 peer-checked:inline-block"></span>
                     </div>
-        
-                    <!-- Tambahan Divisi lainnya -->
-                    <!-- Gunakan pola yang sama seperti di atas -->
         
                 </div>
             </div>
         </div>
         
         <script>
-            const maxSelection = 3;
+            const maxSelection = 2;
             const checkboxes = document.querySelectorAll('input[type="checkbox"]');
             
             checkboxes.forEach(function(checkbox) {
                 checkbox.addEventListener('change', function() {
                     const checkedCount = document.querySelectorAll('input[type="checkbox"]:checked').length;
                     
-                    // Batasi pilihan hingga 3
                     if (checkedCount > maxSelection) {
-                        alert('Anda hanya dapat memilih maksimal 3 pilihan.');
+                        alert('Anda hanya dapat memilih maksimal 2 pilihan.');
                         this.checked = false;
                     }
                 });
@@ -170,37 +181,36 @@
           
 
             
-            <div class="w-96 min-w-1 md:w-128 p-6 rounded-lg bg-white border-t-8 border-slate-600 m-3">
+         
+        <div class="w-96 min-w-1 md:w-128 p-6 rounded-lg bg-white border-t-8 border-muda_protic m-3">
             <div class="flex flex-col mb-4 bg-white p-2 rounded shadow-md min-w-1 border-2 border-gray-100">
-                <label class="text-gray-900 font-semibold">No WA <span class="text-red-600">*</span></label>
-                <input name="no wa" type="number" class="border border-gray-300 rounded p-2 mt-2 focus:outline-none focus:ring focus:ring-green-400" required>
-
+                <label class="text-gray-900 font-semibold">Portfolio <span class="text-red-600">*</span></label>
+                <input name="portfolio" type="text" class="border border-gray-300 rounded p-2 mt-2 focus:outline-none focus:ring focus:ring-green-400" required>
             </div>
 
             <div class="flex flex-col mb-4 bg-white p-2 rounded shadow-md min-w-1 border-2 border-gray-100">
-                <label class="text-gray-900 font-semibold">Email Aktif <span class="text-red-600">*</span></label>
-                <input name="email aktif" type="text" class="border border-gray-300 rounded p-2 mt-2 focus:outline-none focus:ring focus:ring-green-400" required>
+                <label class="text-gray-900 font-semibold">No Hp</label>
+                <input name="no_hp" type="text" class="border border-gray-300 rounded p-2 mt-2 focus:outline-none focus:ring focus:ring-green-400">
             </div>
 
             <div class="flex flex-col mb-4 bg-white p-2 rounded shadow-md min-w-1 border-2 border-gray-100">
-                <label class="text-gray-900 font-semibold">GitHub</label>
+                <label class="text-gray-900 font-semibold">Email</label>
+                <input name="email" type="text" class="border border-gray-300 rounded p-2 mt-2 focus:outline-none focus:ring focus:ring-green-400">
+            </div>
+
+            <div class="flex flex-col mb-4 bg-white p-2 rounded shadow-md min-w-1 border-2 border-gray-100">
+                <label class="text-gray-900 font-semibold">Github</label>
                 <input name="github" type="text" class="border border-gray-300 rounded p-2 mt-2 focus:outline-none focus:ring focus:ring-green-400">
             </div>
-
             <div class="flex flex-col mb-4 bg-white p-2 rounded shadow-md min-w-1 border-2 border-gray-100">
-                <label class="text-gray-900 font-semibold">LinkedIn</label>
+                <label class="text-gray-900 font-semibold">Linkedin</label>
                 <input name="linkedin" type="text" class="border border-gray-300 rounded p-2 mt-2 focus:outline-none focus:ring focus:ring-green-400">
-            </div>
-
-            <div class="flex flex-col mb-4 bg-white p-2 rounded shadow-md min-w-1 border-2 border-gray-100">
-                <label class="text-gray-900 font-semibold">Instagram</label>
-                <input name="instagram" type="text" class="border border-gray-300 rounded p-2 mt-2 focus:outline-none focus:ring focus:ring-green-400">
             </div>
         </div>
 
         <button 
         type="submit" 
-        class="bg-green-600 text-white font-semibold rounded p-2 mt-4 w-96 md:w-128 transition transform hover:bg-green-700 hover:scale-105 hover:shadow-lg active:scale-95 focus:outline-none focus:ring-4 focus:ring-green-300" 
+        class="bg-sedang_protic text-white font-semibold rounded p-2 mt-4 w-96 md:w-128 transition transform hover:bg-hijau_protic hover:scale-105 hover:shadow-lg active:scale-95 focus:outline-none focus:ring-4 focus:ring-green-300" 
         id="submit">
         Kirim
     </button>
@@ -229,6 +239,7 @@
         </div>
         </footer>
     </div>
+</div>
 
     <script>
 
