@@ -14,6 +14,7 @@ module.exports = {
       },
       width: {
         '128': '32rem',
+        '84': '21rem',
       },
       keyframes: {
         melayang :{
