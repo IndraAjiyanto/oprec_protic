@@ -19,19 +19,18 @@
         <img src="asset/Logo Protic.png" class="m-5 size-40 animate-melayang" loading="lazy">
         <img src="asset/Divisi.png" class="mb-4 w-84 min-w-1 md:w-128 rounded text-white shadow-sm " data-aos="zoom-out" loading="lazy">
         <img src="asset/pendaftaran.png" class="mb-4 w-84 min-w-1 md:w-128 rounded text-white shadow-sm " data-aos="zoom-out" loading="lazy">
-        <form name="submit-to-google-sheet" id="form" class="flex flex-col justify-center items-center">
+        <form name="submit-to-google-sheet" id="form" class="flex flex-col justify-center items-center" enctype="multipart/form-data">
 
             <div data-aos="flip-left" class="w-84 min-w-1 md:w-128 p-6 rounded-lg bg-white border-t-8 border-muda_protic m-3">
             
             <div data-aos="zoom-in-right" data-aos-delay="500"   class="flex flex-col mb-4 min-w-1 bg-white p-2 rounded shadow-md border-2 border-gray-100 ">
                 <label class="text-gray-900 font-semibold after:content-['*'] after:text-red-600 after:ml-1">Nama Lengkap</label>
-                <input name="nama" type="text" id="nama" class="border border-gray-300 rounded p-2 mt-2 focus:outline-none focus:ring focus:ring-green-400" >
-                <p id="error-nama" class="text-red-500 hidden mt-2 text-sm">Nama lengkap wajib diisi!</p>
+                <input name="nama" type="text" id="nama" class="border border-gray-300 rounded p-2 mt-2 focus:outline-none focus:ring focus:ring-green-400" required>
             </div>
 
             <div data-aos="zoom-in-left" data-aos-delay="500"  class="flex flex-col mb-4 bg-white p-2 rounded shadow-md min-w-1 border-2 border-gray-100">
                 <label class="text-gray-900 font-semibold after:content-['*'] after:text-red-600 after:ml-1">NIM</label>
-                <input name="nim" type="text" class="border border-gray-300 rounded p-2 mt-2 focus:outline-none focus:ring focus:ring-green-400" required>
+                <input name="nim" id="nim" type="text" class="border border-gray-300 rounded p-2 mt-2 focus:outline-none focus:ring focus:ring-green-400" required>
             </div>
 
             <div data-aos="zoom-in-right" data-aos-delay="500"  class="flex flex-col mb-4 bg-white p-2 rounded shadow-md min-w-1 border-2 border-gray-100">
@@ -270,25 +269,25 @@
         <div data-aos="flip-left" class="w-84 min-w-1 md:w-128 p-6 rounded-lg bg-white border-t-8 border-muda_protic m-3">
             <div  data-aos="zoom-in-left" data-aos-delay="500" class="flex flex-col mb-4 bg-white p-2 rounded shadow-md min-w-1 border-2 border-gray-100">
                 <label class="text-gray-900 font-semibold after:content-['*'] after:text-red-600 after:ml-1">CV</label>
-                <input name="cv" type="file" class="border border-gray-300 rounded p-2 mt-2 focus:outline-none focus:ring focus:ring-green-400" required>
-
+                <input name="cv" type="file" id="cv" class="border border-gray-300 rounded p-2 mt-2 focus:outline-none focus:ring focus:ring-green-400" required>
+                <p id="keterangan" class="text-xs text-gray-500 m-1">file harus berjenis PDF dan maksimal ukuran 2MB</p>
             </div>
 
             <div data-aos="zoom-in-right" data-aos-delay="500"  class="flex flex-col mb-4 bg-white p-2 rounded shadow-md min-w-1 border-2 border-gray-100">
                 <label class="text-gray-900 font-semibold">Portfolio</label>
-                <input name="portfolio" type="text" placeholder="https://drive.google.com/your-cv-link" class="border border-gray-300 rounded p-2 mt-2 focus:outline-none focus:ring focus:ring-green-400">
+                <input name="portfolio" type="url" placeholder="https://drive.google.com/your-cv-link" class="border border-gray-300 rounded p-2 mt-2 focus:outline-none focus:ring focus:ring-green-400">
                 <p class="text-xs text-gray-500 m-1">masukan link google drive yang isinya adalah portfolio anda</p>
             </div>
 
             <div data-aos="zoom-in-left" data-aos-delay="500"  class="flex flex-col mb-4 bg-white p-2 rounded shadow-md min-w-1 border-2 border-gray-100">
-                <label class="text-gray-900 font-semibold after:content-['*'] after:text-red-600 after:ml-1">No Hp</label>
+                <label class="text-gray-900 font-semibold after:content-['*'] after:text-red-600 after:ml-1">No WA</label>
                 <input name="no_hp" type="text" class="border border-gray-300 rounded p-2 mt-2 focus:outline-none focus:ring focus:ring-green-400" required>
             </div>
 
             <div data-aos="zoom-in-right" data-aos-delay="500"  class="flex flex-col mb-4 bg-white p-2 rounded shadow-md min-w-1 border-2 border-gray-100">
                 <label for="email" class="text-gray-900 font-semibold after:content-['*'] after:text-red-600 after:ml-1">Email</label>
                 <input name="email" type="email" placeholder="Masukkan email" class="border border-gray-300 rounded p-2 mt-2 placeholder:text-slate-600 focus:outline-none focus:ring focus:ring-green-400 invalid:text-red-600 invalid:focus:ring-red-600 invalid:focus:border-red-600 peer">
-                    <p class="text-sm m-1 text-red-600 invisible peer-invalid:visible">Email tidak valid</p>
+                    <p class="text-xs m-1 text-red-600 invisible peer-invalid:visible">Email tidak valid</p>
             </div>
 
             <div data-aos="zoom-in-left" data-aos-delay="500"  class="flex flex-col mb-4 bg-white p-2 rounded shadow-md min-w-1 border-2 border-gray-100">
@@ -335,7 +334,10 @@
 </div>
 
     <script>
-
+  const script = document.createElement('script');
+    script.src = 'https://unpkg.com/aos@next/dist/aos.js';
+    script.onload = () => AOS.init();
+    document.body.appendChild(script);
        
 window.onload = function() {
       let loading = document.getElementById("loading");
@@ -346,31 +348,99 @@ window.onload = function() {
       content.classList.remove("hidden");
     }
 
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbyea8oiFrkjj9gIH40DGXd9CExJcorcp9uEEd752izBIe0Pe8EO4UkpvrthbvArOIxtmQ/exec';
-        const form = document.forms['submit-to-google-sheet'];
 
-        form.addEventListener('submit', e => {
-            e.preventDefault();
 
-            document.getElementById("submit").classList.add("hidden");
-            document.getElementById("load").classList.remove("hidden");
-            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                .then(response => {
-                    document.getElementById("submit").classList.remove("hidden");
-                    document.getElementById("load").classList.add("hidden");
-                    console.log('Success!', response);
-                    form.reset();
-                    window.location.href = "nextpage.html";
-                })
-                .catch(error => console.error('Error!', error.message));
-                
 
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwZmP7l9pZjAN9wNSMlj1QBW2B9KYo_dGgmpHUmws4airJazT-KJpv69mOcY8xSoWxJPQ/exec';
+  const form = document.getElementById('form');
+  const fileInput = document.getElementById('cv');
+  const keterangan = document.getElementById('keterangan'); 
+
+    // Validasi file saat dipilih
+    fileInput.onchange = function() {
+    const file = fileInput.files[0];
+    keterangan.classList.add('text-gray-500'); // Reset error visual
+    keterangan.classList.remove('text-red-500');
+    keterangan.classList.remove('text-green-500');
+    keterangan.textContent = 'file harus berjenis PDF dan maksimal ukuran 2MB';
+
+    // Validasi jika file diunggah
+    if (!file) {
+      keterangan.classList.remove('text-red-500');
+      keterangan.classList.add('text-gray-500');
+      return;
+    }
+
+    const maxSize = 2 * 1024 * 1024; // 2MB dalam byte
+    const allowedTypes = ['application/pdf']; // Hanya file PDF yang diperbolehkan
+
+    // Validasi ukuran file
+    if (file.size > maxSize) {
+      keterangan.classList.remove('text-gray-500');
+      keterangan.classList.add('text-red-500');
+      fileInput.value = ""; // Reset input file
+      return;
+    }
+
+    // Validasi tipe file
+    if (!allowedTypes.includes(file.type)) {
+        keterangan.classList.remove('text-gray-500');
+        keterangan.classList.add('text-red-500');
+        fileInput.value = ""; // Reset input file
+      return;
+    }
+
+    // Jika file valid, tampilkan pesan sukses (atau bisa dihapus jika tidak perlu)
+    keterangan.textContent = 'File valid';
+    keterangan.classList.add('text-green-500'); // Ganti warna teks menjadi hijau
+  };
+
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+
+
+    document.getElementById("submit").classList.add("hidden");
+    document.getElementById("load").classList.remove("hidden");
+
+    const file = fileInput.files[0];
+    const reader = new FileReader();
+
+    reader.onload = function() {
+      const formData = new FormData(form);
+      formData.append('fileContent', reader.result);  // Tambahkan konten file sebagai base64
+      formData.append('fileName', file.name);  // Tambahkan konten file sebagai base64
+
+      fetch(scriptURL, { method: 'POST', body: formData })
+        .then(response => response.json())
+        .then(data => {
+          document.getElementById("submit").classList.remove("hidden");
+          document.getElementById("load").classList.add("hidden");
+          console.log('Success!', data);
+          form.reset();
+          window.location.href = "nextpage.html";
+        })
+        .catch(error => {
+          console.error('Error!', error.message);
+          Swal.fire({
+  icon: "error",
+  title: "Pengiriman gagal",
+  text: "silahkan coba lagi",
+  confirmButtonColor : "#F5004F"
+});
+          document.getElementById("submit").classList.remove("hidden");
+          document.getElementById("load").classList.add("hidden");
         });
+    };
 
-        const script = document.createElement('script');
-    script.src = 'https://unpkg.com/aos@next/dist/aos.js';
-    script.onload = () => AOS.init();
-    document.body.appendChild(script);
+    reader.onerror = function() {
+      console.error('Error reading file');
+    };
+
+    reader.readAsDataURL(file);  // Membaca file sebagai base64
+  });
+
+      
     </script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
